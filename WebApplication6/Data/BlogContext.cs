@@ -10,10 +10,10 @@ namespace WebApplication6.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
             //=> optionsBuilder.UseNpgsql("Host=raja.db.elephantsql.com;Database=mnoyzxti;Username=mnoyzxti;Password=zMykjICPmmoO7zIpOIs-YIZbqDCHOvV-");
-            => optionsBuilder.UseNpgsql("Host=ec2-54-83-192-245.compute-1.amazonaws.com;" +
-                "Database=d4eenhcdpd9jt1;" +
-                "Username=amgzhqwusciomu;" +
-                "Password=20f0f9bc906288da640cd19b72b453a35bb743484e08cf817c95998bcc515501");
+            => optionsBuilder.UseNpgsql("Host=ec2-54-221-198-156.compute-1.amazonaws.com;" +
+                "Database=d71is2fbuaa7jk;" +
+                "Username=xaexrwbfailzys;" +
+                "Password=673f9070d0e851307dd7121da13f8446c75d1200263f94c49fa28eb5aaf1e7c7");
 
 
 
