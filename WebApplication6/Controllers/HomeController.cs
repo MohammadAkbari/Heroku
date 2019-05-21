@@ -26,11 +26,13 @@ namespace WebApplication6.Controllers
 
         public IActionResult Add(string name)
         {
-            var blog = new Blog
+            try
             {
-                Url = "akbari.id.ir",
-                Name = name,
-                Posts = new List<Post>
+                var blog = new Blog
+                {
+                    Url = "akbari.id.ir",
+                    Name = name,
+                    Posts = new List<Post>
                 {
                     new Post
                     {
@@ -38,10 +40,20 @@ namespace WebApplication6.Controllers
                         Title = "فشار خون بالا، قاتل خاموش",
                     }
                 }
-            };
+                };
 
-            _blogContext.Blogs.Add(blog);
-            _blogContext.SaveChanges();
+                _blogContext.Blogs.Add(blog);
+
+                _blogContext.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                return Ok(new
+                {
+                    ex.Message,
+                    InnerMessage = ex.InnerException?.Message
+                });
+            }
 
             return Ok();
         }
