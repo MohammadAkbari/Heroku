@@ -65,6 +65,13 @@ namespace WebApplication6.Controllers
             return Json(res);
         }
 
+        public IActionResult Connect()
+        {
+            var res = _blogContext.Database.CanConnect();
+
+            return Json(res);
+        }
+
         public IActionResult Privacy()
         {
             return View();
