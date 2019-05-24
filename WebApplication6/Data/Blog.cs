@@ -10,4 +10,9 @@ namespace WebApplication6.Data
 
         public List<Post> Posts { get; set; }
     }
+
+    public class CreateBlogVm
+    {
+        public string Name { get; set; }
+    }
 }

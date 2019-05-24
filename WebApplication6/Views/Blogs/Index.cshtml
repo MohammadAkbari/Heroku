@@ -1,0 +1,19 @@
+﻿@model List<Blog>
+
+@{
+    ViewData["Title"] = "Blogs";
+}
+
+<a asp-action="CreateBlog">Create</a>
+
+<table>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.BlogId</td>
+            <td>
+                <a asp-action="Blog" asp-route-id="@item.BlogId">@item.Name</a>
+            </td>
+        </tr>
+    }
+</table>
