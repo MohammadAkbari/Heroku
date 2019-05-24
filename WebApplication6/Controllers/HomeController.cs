@@ -1,4 +1,6 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using WebApplication6.Data;
 using WebApplication6.Models;
@@ -24,6 +26,27 @@ namespace WebApplication6.Controllers
             var res = _blogContext.Database.CanConnect();
 
             return Json(res);
+        }
+
+        public IActionResult ResetDataBase()
+        {
+            try
+            {
+                var blogs = _blogContext.Blogs.ToList();
+
+                _blogContext.RemoveRange(blogs);
+                _blogContext.SaveChanges();
+
+                return Ok("Success");
+            }
+            catch (Exception ex)
+            {
+                return Ok(new
+                {
+                    ex.Message,
+                    InnerMessage = ex.InnerException?.Message
+                });
+            }
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
