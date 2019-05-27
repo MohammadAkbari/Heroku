@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
 using System.Collections.Generic;
 
 namespace WebApplication6.Data
@@ -8,7 +9,7 @@ namespace WebApplication6.Data
         public int PostId { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
-
+        public DateTime CreatedOn { get; set; }
         public int BlogId { get; set; }
         public Blog Blog { get; set; }
     }
