@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
+using Data;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using WebApplication6.Data;
 
 namespace WebApplication6
 {
@@ -22,12 +17,10 @@ namespace WebApplication6
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
-
-
+                .UseStartup<Startup>(); 
     }
 
-    public static class X
+    public static class MigrateDatabaseExtension
     {
         public static IWebHost MigrateDatabase<T>(this IWebHost webHost) where T : DbContext
         {

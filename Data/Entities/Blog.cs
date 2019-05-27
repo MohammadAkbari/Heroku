@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace WebApplication6.Data
+namespace Data.Entities
 {
     public class Blog
     {
@@ -16,10 +16,5 @@ namespace WebApplication6.Data
 
         public List<Post> Posts { get; set; }
         public DateTime CreatedOn { get; private set; }
-    }
-
-    public class CreateBlogVm
-    {
-        public string Name { get; set; }
     }
 }

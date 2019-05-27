@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Linq;
+using Data;
 using Microsoft.AspNetCore.Mvc;
-using WebApplication6.Data;
 using WebApplication6.Models;
 
 namespace WebApplication6.Controllers

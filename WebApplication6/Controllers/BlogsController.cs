@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Linq;
+using Data;
+using Data.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using WebApplication6.Data;
+using WebApplication6.ViewModels;
 
 namespace WebApplication6.Controllers
 {

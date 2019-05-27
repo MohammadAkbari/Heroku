@@ -1,6 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Data.Entities;
+using Microsoft.EntityFrameworkCore;
 
-namespace WebApplication6.Data
+namespace Data
 {
     public class BlogContext : DbContext
     {
