@@ -13,6 +13,7 @@ namespace Data.Entities
         public string Title { get; set; }
         public string Content { get; set; }
         public int Number { get; set; }
+        public string Tag { get; set; }
         public DateTime CreatedOn { get; set; }
         public int BlogId { get; set; }
         public Blog Blog { get; set; }

@@ -80,6 +80,7 @@ namespace WebApplication6.Controllers
                 {
                     Content = vm.Content,
                     Number = vm.Number,
+                    Tag = vm.Tag,
                     BlogId = vm.BlogId
                 };
 

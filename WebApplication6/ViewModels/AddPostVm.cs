@@ -13,6 +13,7 @@ namespace WebApplication6.ViewModels
 
         public string Content { get; set; }
         public int Number { get; set; }
+        public string Tag { get; set; }
 
         public int BlogId { get; set; }
 
