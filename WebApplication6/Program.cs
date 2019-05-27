@@ -12,8 +12,8 @@ namespace WebApplication6
     {
         public static void Main(string[] args)
         {
-            CreateWebHostBuilder(args).Build().MigrateDatabase<BlogContext>().Run();
-            //CreateWebHostBuilder(args).Build().Run();
+            //CreateWebHostBuilder(args).Build().MigrateDatabase<BlogContext>().Run();
+            CreateWebHostBuilder(args).Build().Run();
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
