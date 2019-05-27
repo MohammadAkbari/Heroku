@@ -79,6 +79,7 @@ namespace WebApplication6.Controllers
                 var post = new Post
                 {
                     Content = vm.Content,
+                    Number = vm.Number,
                     BlogId = vm.BlogId
                 };
 
